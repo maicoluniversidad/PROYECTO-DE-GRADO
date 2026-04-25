@@ -1,0 +1,39 @@
+.b2bConstructionPartsApp {
+  width: 100%;
+  height: 3378px;
+  position: relative;
+  background-color: var(--color-white);
+  line-height: normal;
+  letter-spacing: normal;
+}
+.body,
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-whitesmoke-200);
+  height: 100%;
+  padding: 85px var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  width: 100%;
+}
+.mainContent {
+  width: 1536px;
+  flex: 1;
+  background-color: var(--color-white);
+}
+@media screen and (max-width: 1500px) {
+  .b2bConstructionPartsApp {
+    height: auto;
+    min-height: 3378px;
+  }
+  .body {
+    height: auto;
+  }
+}
