@@ -3,19 +3,36 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   font-family: var(--font-inter);
+  box-sizing: border-box;
 }
 .container {
-  padding-top: 100px; /* Esto deja espacio para que el header no tape el título */
+  width: 100%;
+  max-width: 1200px;
+  padding: 100px 24px 0;
+  margin: 0 auto;
+  gap: var(--gap-32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-inter);
+  box-sizing: border-box;
 }
 .container2 {
   gap: var(--gap-16);
   text-align: center;
   font-size: var(--fs-36);
   color: var(--color-gray);
+  width: 100%;
+  align-items: center;
 }
 .containerWrapper {
-  padding: var(--padding-0) 340px var(--padding-0) 339px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  justify-content: center;
 }
 .container3,
 .containerWrapper,
@@ -63,40 +80,47 @@
   display: inline-block;
 }
 .heading1 {
-  height: var(--height-40);
+  height: auto;
   display: flex;
   align-items: flex-start;
-  padding: var(--padding-0) 179px var(--padding-2);
+  padding: 0;
   box-sizing: border-box;
+  width: 100%;
+  justify-content: center;
 }
 .encuentraTuPieza {
   margin: 0;
-  height: var(--height-40);
-  width: 489px;
+  height: auto;
+  width: 100%;
+  max-width: 600px;
   position: relative;
   font-size: inherit;
   line-height: var(--lh-40);
   font-weight: 700;
   font-family: inherit;
-  display: inline-block;
+  display: block;
   flex-shrink: 0;
+  text-align: center;
 }
 .paragraph {
-  height: var(--height-28);
+  height: auto;
   display: flex;
   align-items: flex-start;
-  padding: var(--padding-0) 58px var(--padding-1) 59px;
+  padding: 0;
   box-sizing: border-box;
   font-size: var(--fs-18);
   color: var(--color-slategray);
+  width: 100%;
+  justify-content: center;
 }
 .respondeUnasPreguntas {
-  margin-top: -1px;
-  height: var(--height-28);
-  width: 730px;
+  margin-top: 0;
+  height: auto;
+  width: 100%;
+  max-width: 700px;
   position: relative;
   line-height: var(--lh-28);
-  display: inline-block;
+  display: block;
 }
 .container4,
 .container5 {
@@ -105,13 +129,13 @@
 }
 .container4 {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--gap-14);
 }
 .container5 {
   width: var(--width-848);
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: var(--gap-20);
 }
 .text {
@@ -158,10 +182,11 @@
 }
 .container8 {
   display: flex;
-  flex-direction: row; /* Números en fila */
+  flex-direction: row;
   justify-content: center;
   gap: 15px;
   margin: 20px 0;
+  width: 100%;
 }
 .container10,
 .container9 {
@@ -256,10 +281,12 @@
   flex-direction: column;
   gap: var(--gap-32);
   max-width: 100%;
-  text-align: left;
+  text-align: center;
   font-size: var(--fs-24);
   color: var(--color-gray);
   font-family: var(--font-inter);
+  width: 100%;
+  align-items: center;
 }
 .container20,
 .containerParent,
@@ -279,6 +306,7 @@
   padding: 33px var(--padding-32) var(--padding-1);
   gap: var(--gap-32);
   max-width: 100%;
+  margin: 0 auto;
 }
 .heading2 {
   align-self: stretch;
@@ -303,12 +331,18 @@
 .container21 {
   align-self: stretch;
   height: 230px;
+  width: 100%;
 }
 .buttonParent {
+  display: flex;
   flex-direction: column;
+  gap: var(--gap-16);
+  max-width: 100%;
+  width: 100%;
 }
 .container22 {
-  width: var(--width-848);
+  width: 100%;
+  max-width: var(--width-848);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -321,12 +355,16 @@
   padding: var(--padding-10) 21px var(--padding-14) var(--padding-24);
   background-color: var(--color-aliceblue-100);
   height: var(--height-48);
-  width: 135.8px;
+  width: auto;
+  min-width: 135.8px;
   border-radius: var(--br-10);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   gap: var(--gap-6);
+  flex: 1;
+  max-width: 200px;
 }
 .icon2,
 .iconContainer {

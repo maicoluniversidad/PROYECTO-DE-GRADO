@@ -147,11 +147,13 @@
 .telfono {
   margin-top: -2px;
   height: var(--height-24);
-  width: 69px;
   position: relative;
   line-height: var(--lh-24);
   display: inline-block;
   flex-shrink: 0;
+}
+.telfono {
+  width: 69px;
 }
 .phoneSpace {
   width: 132px;
@@ -351,4 +353,10 @@
     padding-right: var(--padding-20);
     box-sizing: border-box;
   }
+}
+.container3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap-16);
 }

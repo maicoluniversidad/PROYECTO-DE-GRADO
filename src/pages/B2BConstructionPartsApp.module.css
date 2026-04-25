@@ -1,7 +1,7 @@
 .b2bConstructionPartsApp {
   width: 100%;
-  height: 3378px;
-  position: relative;
+  height: 10px;
+  position: center;
   background-color: var(--color-white);
   line-height: normal;
   letter-spacing: normal;
@@ -16,7 +16,7 @@
 .body {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 10;
   background-color: var(--color-whitesmoke-200);
   height: 100%;
   padding: 85px var(--padding-0) var(--padding-0);
@@ -24,14 +24,14 @@
   width: 100%;
 }
 .mainContent {
-  width: 1536px;
+  width: 100%;
   flex: 1;
-  background-color: var(--color-white);
+  background-color: var(--color-blue-100);
 }
 @media screen and (max-width: 1500px) {
   .b2bConstructionPartsApp {
     height: auto;
-    min-height: 3378px;
+    min-height: 10px;
   }
   .body {
     height: auto;

@@ -4,7 +4,12 @@
   max-width: 100%;
 }
 .footer {
-  width: 1536px;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: none;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
   height: 325px;
   background-color: var(--color-gray);
   display: flex;
