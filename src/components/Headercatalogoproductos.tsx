@@ -22,7 +22,7 @@ const Headercatalogoproductos: FunctionComponent<HeaderType> = ({ className = ""
   }, [navigate]);
 
   const onLinkClick = useCallback(() => {
-    navigate("/encontrar-pieza", { replace: true });
+    navigate("/admin", { replace: true });
   }, [navigate]);
 
   return (

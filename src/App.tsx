@@ -2,6 +2,7 @@ import { Routes, Route, Navigate, Link } from "react-router-dom";
 import B2BConstructionPartsApp from "./pages/B2BConstructionPartsApp"; 
 import Encontrarpieza from "./pages/Encontrarpieza";
 import Catalogoproductos from "./pages/catalogoproductos";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/encontrar-pieza" element={<Encontrarpieza />} />
         <Route path="/catalogo" element={<Catalogoproductos />} />
         <Route path="/encontrar-pieza/catalogo" element={<Catalogoproductos />} />
+        <Route path="/admin" element={<Admin />} />
 
         {/* 🔥 seguridad */}
         <Route path="*" element={<Navigate to="/" replace />} />
