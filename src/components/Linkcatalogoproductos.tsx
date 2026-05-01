@@ -34,7 +34,7 @@ export type LinkType = {
   onContainerClick?: () => void;
 };
 
-const Link: FunctionComponent<LinkType> = ({
+const Linkcatalogoproductos: FunctionComponent<LinkType> = ({
   className = "",
   linkWidth,
   container,
@@ -181,7 +181,7 @@ const Link: FunctionComponent<LinkType> = ({
           </div>
           <button className={styles.container8}>
             <div className={styles.verDetalles}>Ver detalles</div>
-            <img className={styles.icon} alt="" src="/Iconcatalogoproductos12.svg" />
+            <img className={styles.icon} alt="" src="/Icon12.svg" />
           </button>
         </div>
       </div>
@@ -189,4 +189,4 @@ const Link: FunctionComponent<LinkType> = ({
   );
 };
 
-export default Link;
+export default Linkcatalogoproductos;

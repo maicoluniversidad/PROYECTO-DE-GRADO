@@ -1,4 +1,8 @@
 .section {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   height: 690px;
   background-color: var(--color-white);
   flex-direction: column;
@@ -11,11 +15,11 @@
   font-family: var(--font-inter);
 }
 .container,
-.heading2,
-.section {
+.heading2 {
   align-self: stretch;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 .container {
   height: var(--height-80);
@@ -28,7 +32,7 @@
   box-sizing: border-box;
 }
 .categorasPrincipales {
-  margin: 0;
+  margin: 0 auto;
   height: var(--height-36);
   width: 333px;
   position: relative;
@@ -36,28 +40,35 @@
   line-height: var(--lh-36);
   font-weight: 700;
   font-family: inherit;
+  text-align: center;
   display: inline-block;
   flex-shrink: 0;
 }
 .paragraph {
+  
   align-self: stretch;
   height: var(--height-28);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: var(--padding-0) 421px var(--padding-1);
   box-sizing: border-box;
   font-size: var(--fs-18);
   color: var(--color-slategray);
 }
 .amplioCatlogoDe {
-  margin-top: -1px;
+  
+  margin: 0 auto;
   height: var(--height-28);
   width: 389px;
   position: relative;
   line-height: var(--lh-28);
+  text-align: center;
   display: inline-block;
 }
 .container2 {
+  align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: 354px;
   display: flex;

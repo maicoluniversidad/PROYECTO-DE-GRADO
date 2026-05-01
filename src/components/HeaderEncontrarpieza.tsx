@@ -1,12 +1,12 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Headercatalogoproductos.module.css";
+import styles from "./HeaderEncontrarpieza.module.css";
 
 export type HeaderType = {
   className?: string;
 };
 
-const Headercatalogoproductos: FunctionComponent<HeaderType> = ({ className = "" }) => {
+const HeaderEncontrarpieza: FunctionComponent<HeaderType> = ({ className = "" }) => {
   const navigate = useNavigate();
 
   const onLinkContainerClick = useCallback(() => {
@@ -17,7 +17,7 @@ const Headercatalogoproductos: FunctionComponent<HeaderType> = ({ className = ""
     navigate("/encontrar-pieza", { replace: true });
   }, [navigate]);
 
-  const onCatlogoClick = useCallback(() => {
+  const onCatlogoTextClick = useCallback(() => {
     navigate("/catalogo", { replace: true });
   }, [navigate]);
 
@@ -26,11 +26,11 @@ const Headercatalogoproductos: FunctionComponent<HeaderType> = ({ className = ""
   }, [navigate]);
 
   return (
-    <section className={[styles.header, className].join(" ")}>
+    <header className={[styles.headerEncontrarpieza, className].join(" ")}>
       <div className={styles.container}>
-        <div className={styles.linkcatalogoproductos}>
+        <div className={styles.link}>
           <img className={styles.containerIcon} alt="" src="/Container1.svg" />
-          <div className={styles.containercatalogoproductos2}>
+          <div className={styles.container2}>
             <div className={styles.heading1}>
               <h3 className={styles.metalMecnicaEl}>
                 metal mecánica el imperio
@@ -46,18 +46,20 @@ const Headercatalogoproductos: FunctionComponent<HeaderType> = ({ className = ""
             <div className={styles.inicio}>Inicio</div>
           </div>
           <div className={styles.link3} onClick={onLinkContainerClick1}>
-            <div className={styles.encontrarPieza}>Encontrar Pieza</div>
+            <div className={styles.Encontrarpieza}>Encontrar Pieza</div>
           </div>
-          <div className={styles.link4} onClick={onCatlogoClick}>
-            <div className={styles.catlogo}>Catálogo</div>
+          <div className={styles.link4} onClick={onCatlogoTextClick}>
+            <div className={styles.catlogo}>
+              Catálogo
+            </div>
           </div>
           <button className={styles.link5} onClick={onLinkClick}>
             <div className={styles.acceder}>Acceder</div>
           </button>
         </nav>
       </div>
-    </section>
+    </header>
   );
 };
 
-export default Headercatalogoproductos;
+export default HeaderEncontrarpieza;

@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react";
 import styles from "./Footercatalogoproductos.module.css";
 
-export type FooterType = {
+export type FootercatalogoproductosType = {
   className?: string;
 };
 
-const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
+const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = ({ className = "" }) => {
   return (
     <footer className={[styles.footer, className].join(" ")}>
       <div className={styles.container}>
@@ -85,4 +85,4 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
   );
 };
 
-export default Footer;
+export default Footercatalogoproductos;

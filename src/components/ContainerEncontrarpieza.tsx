@@ -1,41 +1,39 @@
 import { FunctionComponent, useCallback } from "react";
-import { useNavigate } from "react-router-dom"; // 1. Importa el hook
-import Button from "./Buttoncatalogo";
-import styles from "./Containercatalogo.module.css";
+import Button from "./ButtonEncontrarpieza";
+import styles from "./ContainerEncontrarpieza.module.css";
 
 export type ContainerType = {
   className?: string;
 };
 
-const Container: FunctionComponent<ContainerType> = ({ className = "" }) => {
+const ContainerEncontrarpieza: FunctionComponent<ContainerType> = ({ className = "" }) => {
   const onButtonClick = useCallback(() => {
-    // Lógica para el botón
+    // Please sync "Frame 12" to the project
   }, []);
 
   const onButtonClick1 = useCallback(() => {
-    // Lógica para el botón 1
+    // Please sync "Frame 13" to the project
   }, []);
 
   const onButtonClick2 = useCallback(() => {
-    // Lógica para volver
+    // Please sync "B2B Construction Parts App" to the project
   }, []);
 
   return (
-    <div className={[styles.container, className].join(" ")}>
+    <div className={[styles.containerEncontrarpieza, className].join(" ")}>
       <section className={styles.container2}>
         <div className={styles.containerWrapper}>
-          <div className={styles.container3}>
+          <button className={styles.container3}>
             <div className={styles.iconWrapper}>
-              {/* Cambiado a Iconcatalogo9.svg según tu lista de archivos */}
               <img
                 className={styles.icon}
                 loading="lazy"
-                alt="Búsqueda"
-                src="/Iconcatalogo9.svg" 
+                alt=""
+                src="/Icon9.svg"
               />
             </div>
             <div className={styles.bsquedaGuiada}>Búsqueda Guiada</div>
-          </div>
+          </button>
         </div>
         <div className={styles.heading1}>
           <h1 className={styles.encuentraTuPieza}>
@@ -49,7 +47,6 @@ const Container: FunctionComponent<ContainerType> = ({ className = "" }) => {
           </div>
         </div>
       </section>
-
       <div className={styles.container4}>
         <div className={styles.container5}>
           <div className={styles.text}>
@@ -63,32 +60,31 @@ const Container: FunctionComponent<ContainerType> = ({ className = "" }) => {
           <div className={styles.container7} />
         </div>
         <div className={styles.container8}>
-          <div className={styles.container9}>
+          <button className={styles.container9}>
             <div className={styles.container10}>
               <div className={styles.productImage}>1</div>
             </div>
             <div className={styles.container11} />
-          </div>
-          <div className={styles.container9}>
+          </button>
+          <button className={styles.container9}>
             <div className={styles.container13}>
               <div className={styles.div}>2</div>
             </div>
             <div className={styles.container11} />
-          </div>
-          <div className={styles.container9}>
+          </button>
+          <button className={styles.container9}>
             <div className={styles.container13}>
               <div className={styles.div}>3</div>
             </div>
             <div className={styles.container11} />
-          </div>
-          <div className={styles.container18}>
+          </button>
+          <button className={styles.container18}>
             <div className={styles.container19}>
               <div className={styles.div}>4</div>
             </div>
-          </div>
+          </button>
         </div>
       </div>
-
       <section className={styles.containerParent}>
         <div className={styles.container20}>
           <div className={styles.heading2}>
@@ -127,20 +123,17 @@ const Container: FunctionComponent<ContainerType> = ({ className = "" }) => {
             </div>
           </div>
         </div>
-
         <div className={styles.container22}>
           <button className={styles.button} onClick={onButtonClick2}>
             <div className={styles.iconContainer}>
-              {/* Cambiado a Iconcatalogo.svg según tu lista */}
-              <img className={styles.icon2} alt="Anterior" src="/Iconcatalogo.svg" />
+              <img className={styles.icon2} alt="" src="/Icon.svg" />
             </div>
             <div className={styles.anterior}>Anterior</div>
           </button>
           <button className={styles.button2}>
             <div className={styles.siguiente}>Siguiente</div>
             <div className={styles.iconContainer}>
-              {/* Cambiado a Iconcatalogo1.svg según tu lista */}
-              <img className={styles.icon2} alt="Siguiente" src="/Iconcatalogo1.svg" />
+              <img className={styles.icon2} alt="" src="/Icon1.svg" />
             </div>
           </button>
         </div>
@@ -149,4 +142,4 @@ const Container: FunctionComponent<ContainerType> = ({ className = "" }) => {
   );
 };
 
-export default Container;
+export default ContainerEncontrarpieza;

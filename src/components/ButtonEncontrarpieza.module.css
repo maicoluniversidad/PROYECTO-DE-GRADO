@@ -1,0 +1,81 @@
+.button,
+.container {
+    align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+}
+.button {
+    align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: var(--border-1);
+  padding: var(--padding-26) var(--padding-24) var(--padding-2);
+  background-color: transparent;
+  width: var(--width-383);
+  height: var(--height-107);
+  border-radius: var(--br-14);
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: var(--gap-8);
+}
+.container {
+    align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+.bisagra,
+.container,
+.heading3 {
+    align-items: center;
+  justify-content: center;
+  height: var(--height-27);
+}
+.heading3 {
+    align-items: center;
+  justify-content: center;
+  width: 62.3px;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-1) var(--padding-0);
+  box-sizing: border-box;
+}
+.bisagra {
+    align-items: center;
+  justify-content: center;
+  margin-top: -1px;
+  width: 67px;
+  position: relative;
+  font-size: var(--fs-18);
+  line-height: var(--lh-27);
+  display: inline-block;
+  font-family: var(--font-inter);
+  color: var(--color-gray);
+  text-align: left;
+  flex-shrink: 0;
+}
+.paragraph {
+    align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  height: var(--height-20);
+  display: flex;
+  align-items: flex-start;
+}
+.elementosDeArticulacin {
+    align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  font-size: var(--fs-14);
+  line-height: var(--lh-20);
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-slategray);
+  text-align: left;
+}
+@media screen and (max-width: 450px) {
+  .button {
+    width: 100%;
+  }
+}

@@ -21,7 +21,7 @@ const B2BConstructionPartsApp: FunctionComponent = () => {
         </section>
         <Footer />
       </main>
-      <Header /> 
+      <Header />
     </div>
   );
 };

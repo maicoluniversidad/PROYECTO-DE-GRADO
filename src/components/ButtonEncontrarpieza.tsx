@@ -1,5 +1,6 @@
-import {FunctionComponent, useMemo,type CSSProperties,useCallback,} from "react";
-import styles from "./Buttoncatalogo.module.css";
+import {FunctionComponent,useMemo,type CSSProperties,useCallback,
+} from "react";
+import styles from "./ButtonEncontrarpieza.module.css";
 
 export type ButtonType = {
   className?: string;
@@ -14,7 +15,7 @@ export type ButtonType = {
   onButtonClick?: () => void;
 };
 
-const Button: FunctionComponent<ButtonType> = ({
+const ButtonEncontrarpieza: FunctionComponent<ButtonType> = ({
   className = "",
   onButtonClick,
   heading3Width,
@@ -34,16 +35,16 @@ const Button: FunctionComponent<ButtonType> = ({
     };
   }, [bisagraWidth]);
 
-  const onButtonClick1 = useCallback(() => {
+  const onButtonClickEncontrarpieza1 = useCallback(() => {
     // Please sync "Frame 12" to the project
   }, []);
 
   return (
     <button
-      className={[styles.button, className].join(" ")}
+      className={[styles.buttonEncontrarpieza, className].join(" ")}
       onClick={onButtonClick}
     >
-      <div className={styles.container}>
+      <div className={styles.containerEncontrarpieza}>
         <div className={styles.heading3} style={heading3Style}>
           <b className={styles.bisagra} style={bisagraStyle}>
             {bisagra}
@@ -59,4 +60,4 @@ const Button: FunctionComponent<ButtonType> = ({
   );
 };
 
-export default Button;
+export default ButtonEncontrarpieza;

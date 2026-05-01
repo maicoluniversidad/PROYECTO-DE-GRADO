@@ -1,8 +1,4 @@
-import {
-  FunctionComponent,
-  useMemo,
-  type CSSProperties,
-  useCallback,
+import {FunctionComponent,useMemo,type CSSProperties,useCallback,
 } from "react";
 import styles from "./Linkcatalogoproductos1.module.css";
 
@@ -33,7 +29,7 @@ export type Link1Type = {
   onContainerClick4?: () => void;
 };
 
-const Link1: FunctionComponent<Link1Type> = ({
+const Linkcatalogoproductos1: FunctionComponent<Link1Type> = ({
   className = "",
   linkWidth,
   containerPadding,
@@ -176,7 +172,7 @@ const Link1: FunctionComponent<Link1Type> = ({
           </div>
           <button className={styles.container9}>
             <div className={styles.verDetalles}>Ver detalles</div>
-            <img className={styles.icon} alt="" src="/Iconcatalogoproductos12.svg" />
+            <img className={styles.icon} alt="" src="/Icon12.svg" />
           </button>
         </div>
       </div>
@@ -184,4 +180,4 @@ const Link1: FunctionComponent<Link1Type> = ({
   );
 };
 
-export default Link1;
+export default Linkcatalogoproductos1;

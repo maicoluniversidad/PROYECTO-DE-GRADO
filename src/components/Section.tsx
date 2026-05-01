@@ -19,8 +19,8 @@ const Section: FunctionComponent<SectionType> = ({ className = "" }) => {
 
   // Función para el botón gris (Ver Catálogo)
   const onVerCatalogoClick = useCallback(() => {
-    // Navegamos directamente a la sub-ruta del catálogo
-    navigate("/encontrar-pieza/catalogo", { replace: true }); 
+    // Navegamos directamente al catálogo
+    navigate("/catalogo", { replace: true });
   }, [navigate]);
 
   return (

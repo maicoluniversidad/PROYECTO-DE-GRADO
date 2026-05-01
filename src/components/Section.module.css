@@ -1,5 +1,7 @@
 .container,
 .section {
+  align-items: center;
+  justify-content: center;
   align-self: stretch;
   display: flex;
   align-items: flex-start;
@@ -100,6 +102,10 @@
   width: var(--width-592);
   gap: var(--gap-16);
   max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .container4,
 .iconWrapper,
@@ -117,6 +123,9 @@
   border-radius: var(--br-10);
   box-sizing: border-box;
   gap: var(--gap-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .iconWrapper {
   flex-direction: column;
@@ -152,7 +161,8 @@
   width: 159.4px;
   border-radius: var(--br-10);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 .link2:hover {
   background-color: var(--color-gainsboro-200);

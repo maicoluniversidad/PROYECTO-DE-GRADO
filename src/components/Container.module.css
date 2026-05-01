@@ -12,6 +12,7 @@
   font-family: var(--font-inter);
 }
 .buttonParent {
+  
   display: flex;
   flex-direction: row; 
   gap: 16px;

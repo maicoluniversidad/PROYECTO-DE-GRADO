@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import List from "./List";
 import styles from "./Footer.module.css";
 
 export type FooterType = {
@@ -20,7 +21,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             </div>
           </div>
         </div>
-        <div className={styles.productList}>
+        <div className={styles.productsCompanyPanel}>
           <div className={styles.container3}>
             <div className={styles.heading4}>
               <div className={styles.productos}>Productos</div>
@@ -44,36 +45,22 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
             <div className={styles.heading4}>
               <div className={styles.empresa}>Empresa</div>
             </div>
-            <div className={styles.list2}>
-              <div className={styles.listItem}>
-                <div className={styles.bisagras}>Quiénes Somos</div>
-              </div>
-              <div className={styles.listItem}>
-                <div className={styles.bisagras}>Certificaciones</div>
-              </div>
-              <div className={styles.listItem}>
-                <div className={styles.bisagras}>Clientes</div>
-              </div>
-            </div>
+            <List
+              quinesSomos="Quiénes Somos"
+              certificaciones="Certificaciones"
+              clientes="Clientes"
+            />
           </div>
         </div>
         <div className={styles.container4}>
           <div className={styles.heading4}>
             <div className={styles.contacto}>Contacto</div>
           </div>
-          <div className={styles.list2}>
-            <div className={styles.listItem}>
-              <div className={styles.bisagras}>
-                contacto@industrialparts.com
-              </div>
-            </div>
-            <div className={styles.listItem}>
-              <div className={styles.bisagras}>+34 900 123 456</div>
-            </div>
-            <div className={styles.listItem}>
-              <div className={styles.bisagras}>Lun-Vie: 8:00 - 18:00</div>
-            </div>
-          </div>
+          <List
+            quinesSomos="contacto@industrialparts.com"
+            certificaciones="+34 900 123 456"
+            clientes="Lun-Vie: 8:00 - 18:00"
+          />
         </div>
       </div>
       <div className={styles.container6}>

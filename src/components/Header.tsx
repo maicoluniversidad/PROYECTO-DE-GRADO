@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./Headercatalogo.module.css";
+import styles from "./Header.module.css";
 
 export type HeaderType = {
   className?: string;

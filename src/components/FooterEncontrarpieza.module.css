@@ -1,9 +1,13 @@
 .container,
-.footer {
+.footerEncontrarpieza {
+    align-items: center;
+  justify-content: center;
   gap: var(--gap-32);
   max-width: 100%;
 }
-.footer {
+.footerEncontrarpieza {
+    align-items: center;
+  justify-content: center;
   width: 100vw;
   min-width: 100vw;
   max-width: none;
@@ -11,7 +15,7 @@
   left: 50%;
   margin-left: -50vw;
   height: 325px;
-  background-color: var(--color-gray);
+  background-color: var(--color-gray-100);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,16 +27,22 @@
   font-family: var(--font-inter);
 }
 .container {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: var(--height-144);
 }
 .container,
 .container2,
 .heading3 {
+    align-items: center;
+  justify-content: center;
   display: flex;
   align-items: flex-start;
 }
 .container2 {
+    align-items: center;
+  justify-content: center;
   height: var(--height-144);
   width: var(--width-284);
   flex-direction: column;
@@ -40,12 +50,16 @@
   font-size: var(--fs-18);
 }
 .heading3 {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: var(--height-27);
   padding: var(--padding-0) var(--padding-0) var(--padding-1);
   box-sizing: border-box;
 }
 .metalMecnicaEl {
+    align-items: center;
+  justify-content: center;
   margin-top: -1px;
   height: var(--height-27);
   width: 230px;
@@ -54,6 +68,8 @@
   display: inline-block;
 }
 .paragraph {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: var(--height-40);
   display: flex;
@@ -64,6 +80,8 @@
   color: var(--color-lightslategray);
 }
 .proveedorLderDe {
+    align-items: center;
+  justify-content: center;
   margin-top: -1px;
   height: var(--height-40);
   width: var(--width-284);
@@ -73,24 +91,34 @@
   flex-shrink: 0;
 }
 .container3,
-.productList {
+.containerParent {
+    align-items: center;
+  justify-content: center;
   display: flex;
   align-items: flex-start;
 }
-.productList {
+.containerParent {
+    align-items: center;
+  justify-content: center;
   gap: var(--gap-32);
   max-width: 100%;
 }
 .container3 {
+    align-items: center;
+  justify-content: center;
   width: var(--width-284);
   flex-direction: column;
   gap: var(--gap-16);
 }
 .heading4,
 .productos {
+    align-items: center;
+  justify-content: center;
   height: var(--height-24);
 }
 .heading4 {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   display: flex;
   align-items: flex-start;
@@ -98,6 +126,8 @@
   box-sizing: border-box;
 }
 .productos {
+    align-items: center;
+  justify-content: center;
   margin-top: -2px;
   width: var(--width-80);
   position: relative;
@@ -108,26 +138,36 @@
 }
 .list,
 .listItem {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   display: flex;
   align-items: flex-start;
 }
 .list {
+    align-items: center;
+  justify-content: center;
   height: 104px;
   flex-direction: column;
   gap: var(--gap-8);
   font-size: var(--fs-14);
-  color: var(--color-lightgray-100);
+  color: var(--color-lightgray);
 }
 .listItem {
+    align-items: center;
+  justify-content: center;
   height: var(--height-20);
 }
 .bisagras {
+    align-items: center;
+  justify-content: center;
   flex: 1;
   position: relative;
   line-height: var(--lh-20);
 }
 .container4 {
+    align-items: center;
+  justify-content: center;
   height: var(--height-144);
   width: var(--width-284);
   display: flex;
@@ -136,6 +176,8 @@
   gap: var(--gap-16);
 }
 .empresa {
+    align-items: center;
+  justify-content: center;
   margin-top: -2px;
   height: var(--height-24);
   width: 68px;
@@ -146,6 +188,8 @@
   flex-shrink: 0;
 }
 .list2 {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: 76px;
   display: flex;
@@ -153,9 +197,11 @@
   align-items: flex-start;
   gap: var(--gap-8);
   font-size: var(--fs-14);
-  color: var(--color-lightgray-100);
+  color: var(--color-lightgray);
 }
 .contacto {
+    align-items: center;
+  justify-content: center;
   margin-top: -2px;
   height: var(--height-24);
   width: var(--width-72);
@@ -166,6 +212,8 @@
   flex-shrink: 0;
 }
 .container6 {
+    align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: 53px;
   border-top: 1px solid var(--color-darkslategray-200);
@@ -179,29 +227,40 @@
 }
 @media screen and (max-width: 1500px) {
   .container,
-  .footer {
+  .footerEncontrarpieza {
+      align-items: center;
+  justify-content: center;
     height: auto;
   }
   .container {
+      align-items: center;
+  justify-content: center;
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 825px) {
-  .footer {
+  .footerEncontrarpieza {
+      align-items: center;
+  justify-content: center;
     padding-left: var(--padding-76);
     padding-right: var(--padding-76);
     box-sizing: border-box;
   }
   .container,
-  .productList {
+  .containerParent {
+      align-items: center;
+  justify-content: center;
     gap: var(--gap-16);
   }
-  .productList {
-    flex-wrap: wrap;
+  .containerParent {
+    flex-wrap: wrap;  align-items: center;
+  justify-content: center;
   }
 }
 @media screen and (max-width: 450px) {
-  .footer {
+  .footerEncontrarpieza {
+      align-items: center;
+  justify-content: center;
     gap: var(--gap-16);
     padding-left: var(--padding-20);
     padding-right: var(--padding-20);

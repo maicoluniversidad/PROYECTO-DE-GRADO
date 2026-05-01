@@ -1,5 +1,7 @@
 .container,
 .footer {
+    align-items: center;
+  justify-content: center;
   gap: var(--gap-32);
   max-width: 100%;
 }

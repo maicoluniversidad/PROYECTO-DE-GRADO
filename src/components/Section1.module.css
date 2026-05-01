@@ -1,4 +1,6 @@
 .section {
+  align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: 638px;
   background-color: var(--color-whitesmoke-100);
@@ -11,10 +13,14 @@
 .container,
 .heading2,
 .section {
+  align-items: center;
+  justify-content: center;
   display: flex;
   align-items: flex-start;
 }
 .container {
+  align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: 108px;
   flex-direction: column;
@@ -26,6 +32,8 @@
   font-family: var(--font-inter);
 }
 .heading2 {
+  align-items: center;
+  justify-content: center;
   height: var(--height-36);
   padding: var(--padding-0) 469px var(--padding-2) 471px;
   box-sizing: border-box;
@@ -48,6 +56,7 @@
   align-items: flex-start;
 }
 .paragraphWrapper {
+  
   width: 1232px;
   justify-content: center;
   padding: var(--padding-0) var(--padding-20);
@@ -57,6 +66,7 @@
   color: var(--color-slategray);
 }
 .paragraph {
+  
   padding: var(--padding-0) var(--padding-0) var(--padding-1);
 }
 .combinamosTecnologaAvanzada {
@@ -69,6 +79,8 @@
   flex-shrink: 0;
 }
 .container2 {
+  align-items: center;
+  justify-content: center;
   align-self: stretch;
   height: 274px;
   display: flex;

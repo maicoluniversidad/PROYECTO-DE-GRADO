@@ -188,4 +188,149 @@ body {
   --lh-40: 40px;
   --lh-48: 48px;
   --lh-60: 60px;
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  --color-aliceblue-100: #f1f5f9;
+  --color-aliceblue-200: #e2e8f0;
+  --color-darkslategray-100: #475569;
+  --color-darkslategray-200: #334155;
+  --color-dodgerblue: #4d8aff;
+  --color-gainsboro: #e6e6e6;
+  --color-gray: #0f172a;
+  --color-lightgray-100: #cbd5e1;
+  --color-lightgray-200: #c9cfd6;
+  --color-lightslategray: #94a3b8;
+  --color-royalblue-100: #2563eb;
+  --color-royalblue-200: rgba(37, 99, 235, 0.1);
+  --color-royalblue-300: rgba(37, 99, 235, 0.2);
+  --color-slategray: #64748b;
+  --color-white: #fff;
+  --color-whitesmoke: #f5f7fa;
+
+  /* Gap */
+  --gap-4: 4px;
+  --gap-6: 6px;
+  --gap-8: 8px;
+  --gap-12: 12px;
+  --gap-14: 14px;
+  --gap-16: 16px;
+  --gap-20: 20px;
+  --gap-24: 24px;
+  --gap-32: 32px;
+  --gap-48: 48px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-01: 0;
+  --padding-1: 1px;
+  --padding-2: 2px;
+  --padding-4: 4px;
+  --padding-6: 6px;
+  --padding-8: 8px;
+  --padding-10: 10px;
+  --padding-11: 11px;
+  --padding-14: 14px;
+  --padding-16: 16px;
+  --padding-20: 20px;
+  --padding-24: 24px;
+  --padding-26: 26px;
+  --padding-32: 32px;
+  --padding-48: 48px;
+  --padding-76: 76px;
+
+  /* BorderRadius */
+  --br-10: 10px;
+  --br-14: 14px;
+  --br-16: 16px;
+  --br-33554400: 33554400px;
+
+  /* Font */
+  --font-inter: Inter;
+
+  /* FontSize */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-19: 19px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-36: 36px;
+
+  /* Borders */
+  --border-1: 2px solid var(--color-aliceblue-200);
+  --border-2: 2px solid var(--color-lightgray-200);
+
+  /* Shadows */
+  --shadow-drop: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  /* Gradients */
+  --gradient-1: linear-gradient(
+    90deg,
+    var(--color-royalblue-100),
+    #3161eb 7.14%,
+    #3b5feb 14.29%,
+    #435ceb 21.43%,
+    #4a5aec 28.57%,
+    #5157ec 35.71%,
+    #5755ec 42.86%,
+    #5c52ec 50%,
+    #624fec 57.14%,
+    #664cec 64.29%,
+    #6b49ec 71.43%,
+    #7045ed 78.57%,
+    #7442ed 85.71%,
+    #783eed 92.86%,
+    #7c3aed
+  );
+
+  /* WidthHeights */
+  --height-2: 2px;
+  --height-8: 8px;
+  --height-16: 16px;
+  --height-20: 20px;
+  --height-24: 24px;
+  --height-27: 27px;
+  --height-28: 28px;
+  --height-32: 32px;
+  --height-36: 36px;
+  --height-40: 40px;
+  --height-48: 48px;
+  --height-107: 107px;
+  --height-144: 144px;
+  --width-16: 16px;
+  --width-20: 20px;
+  --width-32: 32px;
+  --width-40: 40px;
+  --width-64: 64px;
+  --width-72: 72px;
+  --width-80: 80px;
+  --width-272: 272px;
+  --width-284: 284px;
+  --width-383: 383px;
+  --width-848: 848px;
+
+  /* LineHeights */
+  --lh-16: 16px;
+  --lh-20: 20px;
+  --lh-24: 24px;
+  --lh-26: 26px;
+  --lh-27: 27px;
+  --lh-28: 28px;
+  --lh-32: 32px;
+  --lh-36: 36px;
+  --lh-40: 40px;
+
+  --top-15: 15px;
+}
+
 }

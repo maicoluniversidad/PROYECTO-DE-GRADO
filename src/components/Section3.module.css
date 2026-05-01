@@ -1,20 +1,27 @@
 .container,
 .section {
+  align-items: center;
+  justify-content: center;
   align-self: stretch;
   flex-direction: column;
   box-sizing: border-box;
   max-width: 100%;
 }
 .section {
-  height: 372px;
-  background: var(--gradient-11);
   display: flex;
-  align-items: flex-start;
-  padding: var(--padding-96) 320px var(--padding-0);
+  align-items: center;
+  justify-content: center;
+  height: 372px;
+  background: rgb(29, 30, 87);
+  padding: var(--padding-96) var(--padding-76) var(--padding-0);
   text-align: center;
   font-size: var(--fs-36);
   color: var(--color-white);
   font-family: var(--font-inter);
+}
+.section > .container {
+  justify-content: center;
+  align-items: center;
 }
 .container {
   height: 180px;
@@ -28,6 +35,8 @@
   align-items: flex-start;
 }
 .assistantPanel {
+    align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: var(--gap-24);
   max-width: 100%;
@@ -58,6 +67,14 @@
   color: var(--color-lavender);
 }
 .nuestroAsistenteInteligente {
+  align-items: center;
+  justify-content: center;
+  width: 848px;
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  font-size: var(--fs-18);
+  color: var(--color-lavender);
   flex: 1;
   position: relative;
   line-height: var(--lh-28);
@@ -91,6 +108,8 @@
   position: relative;
 }
 .comenzarBsqueda {
+  align-items: center;
+  justify-content: center;
   height: var(--height-24);
   width: 164px;
   position: relative;

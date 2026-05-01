@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10;
   background-color: var(--color-white);
   border-bottom: var(--border-1);
   box-sizing: border-box;
