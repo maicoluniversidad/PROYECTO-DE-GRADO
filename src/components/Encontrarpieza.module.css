@@ -59,3 +59,16 @@
   color: var(--color-slategray);
   text-align: left;
 }
+@media screen and (max-width: 450px) {
+  .button {
+    padding: 16px;
+  }
+  .bisagra {
+    font-size: var(--fs-16);
+    line-height: var(--lh-24);
+  }
+  .elementosDeArticulacin {
+    font-size: var(--fs-12);
+    line-height: var(--lh-18);
+  }
+}

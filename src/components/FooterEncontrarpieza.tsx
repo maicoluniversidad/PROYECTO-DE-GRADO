@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import List from "./List";
-import styles from "./Footer.module.css";
+import styles from "./FooterEncontrarpieza.module.css";
 
 export type FooterType = {
   className?: string;
