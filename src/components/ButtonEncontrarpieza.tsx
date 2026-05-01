@@ -1,61 +1,23 @@
-import {FunctionComponent,useMemo,type CSSProperties,useCallback,
-} from "react";
+import { FunctionComponent } from "react";
 import styles from "./ButtonEncontrarpieza.module.css";
 
 export type ButtonType = {
-  className?: string;
-  bisagra?: string;
-  elementosDeArticulacin?: string;
-
-  /** Style props */
-  heading3Width?: CSSProperties["width"];
-  bisagraWidth?: CSSProperties["width"];
-
-  /** Action props */
+  title: string;
+  description: string;
   onButtonClick?: () => void;
 };
 
 const ButtonEncontrarpieza: FunctionComponent<ButtonType> = ({
-  className = "",
+  title,
+  description,
   onButtonClick,
-  heading3Width,
-  bisagra,
-  bisagraWidth,
-  elementosDeArticulacin,
 }) => {
-  const heading3Style: CSSProperties = useMemo(() => {
-    return {
-      width: heading3Width,
-    };
-  }, [heading3Width]);
-
-  const bisagraStyle: CSSProperties = useMemo(() => {
-    return {
-      width: bisagraWidth,
-    };
-  }, [bisagraWidth]);
-
-  const onButtonClickEncontrarpieza1 = useCallback(() => {
-    // Please sync "Frame 12" to the project
-  }, []);
-
   return (
-    <button
-      className={[styles.buttonEncontrarpieza, className].join(" ")}
-      onClick={onButtonClick}
-    >
-      <div className={styles.containerEncontrarpieza}>
-        <div className={styles.heading3} style={heading3Style}>
-          <b className={styles.bisagra} style={bisagraStyle}>
-            {bisagra}
-          </b>
-        </div>
+    <button className={styles.cardButton} type="button" onClick={onButtonClick}>
+      <div className={styles.cardHeader}>
+        <span className={styles.cardTitle}>{title}</span>
       </div>
-      <div className={styles.paragraph}>
-        <div className={styles.elementosDeArticulacin}>
-          {elementosDeArticulacin}
-        </div>
-      </div>
+      <p className={styles.cardDescription}>{description}</p>
     </button>
   );
 };

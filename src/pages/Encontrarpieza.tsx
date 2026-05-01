@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import Container from "../components/ContainerEncontrarpieza";
 import Footer from "../components/FooterEncontrarpieza";
-import Header from "../components/Headercatalogoproductos";
+import Header from "../components/HeaderEncontrarpieza";
 import styles from "./Encontrarpieza.module.css";
 
 const Encontrarpieza: FunctionComponent = () => {

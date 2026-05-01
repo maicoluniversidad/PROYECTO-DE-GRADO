@@ -1,176 +1,120 @@
-.header {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  z-index: 10;
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-aliceblue-200);
-  box-sizing: border-box;
+.headerEncontrarpieza {
   width: 100%;
-  height: 85px;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.95);
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: var(--padding-16) 152px var(--padding-1);
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--fs-24);
-  color: var(--color-gray);
-  font-family: var(--font-inter);
+  justify-content: center;
+  padding: 24px 32px;
+  font-family: Inter, sans-serif;
 }
-.container,
+.container {
+  width: min(1200px, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
 .link {
   display: flex;
   align-items: center;
-}
-.container {
-  align-self: stretch;
-  justify-content: space-between;
-  gap: var(--gap-20);
-}
-.link {
-  height: 52px;
-  width: 333.7px;
-  gap: var(--gap-12);
+  gap: 16px;
 }
 .containerIcon {
-  cursor: pointer;
-  border: 0;
-  padding: var(--padding-01);
-  background-color: transparent;
-  height: var(--height-40);
-  width: var(--width-40);
-  border-radius: var(--br-10);
-}
-.container2,
-.heading1 {
+  height: 48px;
+  width: 48px;
+  border-radius: 14px;
+  background: #2563eb;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+.containerIcon img {
+  width: 22px;
+  height: 22px;
 }
 .container2 {
-  height: 52px;
-  flex: 1;
+  display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .heading1 {
-  align-self: stretch;
-  height: var(--height-36);
-  padding: var(--padding-0) var(--padding-0) var(--padding-2) var(--padding-0);
-  box-sizing: border-box;
+  margin: 0;
 }
 .metalMecnicaEl {
   margin: 0;
-  height: var(--height-36);
-  width: 292px;
-  position: relative;
-  font-size: inherit;
-  letter-spacing: -0.6px;
-  line-height: var(--lh-36);
+  font-size: 18px;
   font-weight: 700;
-  font-family: inherit;
-  display: inline-block;
-  flex-shrink: 0;
+  color: #0f172a;
 }
 .paragraph {
-  align-self: stretch;
-  height: var(--height-16);
-  display: flex;
-  align-items: flex-start;
-  font-size: var(--fs-12);
-  color: var(--color-slategray);
-}
-.solucionesB2b {
-  flex: 1;
-  position: relative;
-  line-height: var(--lh-16);
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
 }
 .navigation {
-  margin: 0;
-  height: var(--height-36);
-  width: 361.6px;
   display: flex;
   align-items: center;
-  gap: 31.4px;
-  text-align: left;
-  font-size: var(--fs-14);
-  color: var(--color-darkslategray-100);
-  font-family: var(--font-inter);
+  gap: 24px;
+  font-size: 14px;
+  color: #475569;
 }
-.link2 {
-  height: var(--height-20);
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer;
-}
-.inicio {
-  position: relative;
-  line-height: var(--lh-20);
-}
-.link3 {
-  height: var(--height-20);
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.encontrarPieza {
-  position: relative;
-  line-height: var(--lh-20);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+.link2,
+.link3,
 .link4 {
-  height: var(--height-20);
-  width: 55.7px;
   display: flex;
-  align-items: flex-start;
-}
-.catlogo {
-  position: relative;
-  line-height: var(--lh-20);
+  align-items: center;
   cursor: pointer;
-  flex-shrink: 0;
+}
+.inicio,
+.encontrarPieza,
+.catlogo {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
 }
 .link5 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
   cursor: pointer;
-  border: 0;
-  padding: var(--padding-8) var(--padding-10) var(--padding-8) var(--padding-16);
-  background-color: var(--color-royalblue-100);
-  height: var(--height-36);
-  width: 81.7px;
-  border-radius: var(--br-10);
-  display: flex;
-  align-items: flex-start;
-  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .link5:hover {
-  background-color: var(--color-dodgerblue);
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
 }
 .acceder {
-  position: relative;
-  font-size: var(--fs-14);
-  line-height: var(--lh-20);
-  font-family: var(--font-inter);
-  color: var(--color-white);
-  text-align: left;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
 }
-@media screen and (max-width: 825px) {
-  .header {
-    padding-left: var(--padding-76);
-    padding-right: var(--padding-76);
-    box-sizing: border-box;
-  }
-  .metalMecnicaEl {
-    display: none;
-  }
-}
-@media screen and (max-width: 450px) {
-  .header {
-    padding-left: var(--padding-20);
-    padding-right: var(--padding-20);
-    box-sizing: border-box;
+@media screen and (max-width: 950px) {
+  .headerEncontrarpieza {
+    padding: 18px 24px;
   }
   .navigation {
-    display: none;
-    gap: var(--gap-16);
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
   }
 }

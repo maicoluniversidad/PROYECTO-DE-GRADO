@@ -122,15 +122,21 @@ const CatalogoProductos: FunctionComponent = () => {
         </section>
 
         <section className={styles.toolbar}>
-          <div className={styles.toolbarRow}>
-            <div className={styles.searchCard}>
-              <img className={styles.searchIcon} alt="Buscar" src="/Icon13.svg" />
-              <input
-                className={styles.searchInput}
-                type="text"
-                placeholder="Buscar productos..."
-              />
+          <div className={styles.toolbarCard}>
+            <div className={styles.searchGroup}>
+              <div className={styles.searchCard}>
+                <img className={styles.searchIcon} alt="Buscar" src="/Icon13.svg" />
+                <input
+                  className={styles.searchInput}
+                  type="text"
+                  placeholder="Buscar productos..."
+                />
+              </div>
+              <button className={styles.filterButton} type="button">
+                <img className={styles.filterIcon} alt="Filtrar" src="/Iconcatalogoproductos13.svg" />
+              </button>
             </div>
+
             <div className={styles.viewButtons}>
               <button className={styles.toggleButton} type="button">
                 <img alt="Vista de cuadrícula" src="/Button.svg" />

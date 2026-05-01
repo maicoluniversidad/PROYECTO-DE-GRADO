@@ -22,7 +22,7 @@ const HeaderEncontrarpieza: FunctionComponent<HeaderType> = ({ className = "" })
   }, [navigate]);
 
   const onLinkClick = useCallback(() => {
-    navigate("/encontrar-pieza", { replace: true });
+    navigate("/admin", { replace: true });
   }, [navigate]);
 
   return (
@@ -46,7 +46,7 @@ const HeaderEncontrarpieza: FunctionComponent<HeaderType> = ({ className = "" })
             <div className={styles.inicio}>Inicio</div>
           </div>
           <div className={styles.link3} onClick={onLinkContainerClick1}>
-            <div className={styles.Encontrarpieza}>Encontrar Pieza</div>
+            <div className={styles.encontrarPieza}>Encontrar Pieza</div>
           </div>
           <div className={styles.link4} onClick={onCatlogoTextClick}>
             <div className={styles.catlogo}>
