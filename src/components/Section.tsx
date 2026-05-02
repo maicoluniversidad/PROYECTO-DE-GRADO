@@ -69,33 +69,29 @@ const Section: FunctionComponent<SectionType> = ({ className = "" }) => {
         {/* SECCIÓN DE CERTIFICACIONES E INFO */}
         <section className={styles.container5}>
           <div className={styles.container6}>
-            <div className={styles.isoContainer}>
-              <Container
-                icon="/Icon7.svg"
-                isoReference="5000+"
-                productos="Productos"
-              />
-              <Container
-                icon="/Icon2.svg"
-                isoReference="24h"
-                isoReferenceWidth="58px"
-                productos="Entrega rápida"
-              />
-            </div>
-            <div className={styles.isoContainer}>
-              <Container
-                icon="/Icon1.svg"
-                isoReference="ISO 9001"
-                isoReferenceWidth="135px"
-                productos="Certificado"
-              />
-              <Container
-                icon="/Icon.svg"
-                isoReference="100%"
-                isoReferenceWidth="84px"
-                productos="Garantía"
-              />
-            </div>
+            <Container
+              icon="/Icon7.svg"
+              isoReference="5000+"
+              productos="Productos"
+            />
+            <Container
+              icon="/Icon2.svg"
+              isoReference="24h"
+              isoReferenceWidth="58px"
+              productos="Entrega rápida"
+            />
+            <Container
+              icon="/Icon1.svg"
+              isoReference="ISO 9001"
+              isoReferenceWidth="135px"
+              productos="Certificado"
+            />
+            <Container
+              icon="/Icon.svg"
+              isoReference="100%"
+              isoReferenceWidth="84px"
+              productos="Garantía"
+            />
           </div>
         </section>
       </div>

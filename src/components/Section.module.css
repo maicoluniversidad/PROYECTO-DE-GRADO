@@ -25,10 +25,10 @@
 }
 .containerWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: var(--padding-3) var(--padding-0) var(--padding-0);
   box-sizing: border-box;
-  text-align: left;
+  text-align: center;
   font-size: var(--fs-14);
   color: var(--color-white);
   font-family: var(--font-inter);
@@ -36,7 +36,8 @@
 .container2 {
   gap: var(--gap-32);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 .container3,
 .containerParent {
@@ -46,6 +47,7 @@
 .containerParent {
   flex-direction: column;
   gap: var(--gap-24);
+  align-items: center;
 }
 .container3 {
   width: 245.6px;
@@ -106,7 +108,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .container4,
 .iconWrapper {
@@ -202,14 +204,9 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: var(--gap-16);
-  max-width: 600px;
-}
-.isoContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-16);
+  max-width: 100%;
 }
 @media screen and (max-width: 1500px) {
   .container,
@@ -239,9 +236,6 @@
   .container5,
   .container6 {
     height: auto;
-  }
-  .isoContainer {
-    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 450px) {

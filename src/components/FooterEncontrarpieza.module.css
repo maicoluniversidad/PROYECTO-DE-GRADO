@@ -8,7 +8,7 @@
   padding: 56px 24px 32px;
   box-sizing: border-box;
   color: #ffffff;
-  font-family: Inter, sans-serif;
+  font-family: var(--font-inter);
   gap: 32px;
 }
 .container {

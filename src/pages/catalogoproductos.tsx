@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { useParams } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 import Footer from "../components/Footercatalogoproductos";
 import Header from "../components/Headercatalogoproductos";
 import styles from "./catalogoproductos.module.css";
@@ -171,40 +172,17 @@ const CatalogoProductos: FunctionComponent = () => {
 
         <section className={styles.grid}>
           {products.map((product) => (
-            <article key={product.sku} className={styles.productCard}>
-              <div className={styles.productImage}>
-                <img src={product.image} alt={product.name} />
-              </div>
-              <div className={styles.productInfo}>
-                <div className={styles.productHeader}>
-                  <span className={styles.sku}>{product.sku}</span>
-                  <span className={styles.stock} style={{ backgroundColor: product.stockColor }}>
-                    {product.stock}
-                  </span>
-                </div>
-                <h2 className={styles.productName}>{product.name}</h2>
-                <p className={styles.productDescription}>{product.description}</p>
-                <div className={styles.productSpecs}>
-                  <div className={styles.specRow}>
-                    <span className={styles.specLabel}>Material:</span>
-                    <span className={styles.specValue}>{product.material}</span>
-                  </div>
-                  <div className={styles.specRow}>
-                    <span className={styles.specLabel}>Dimensiones:</span>
-                    <span className={styles.specValue}>{product.dimensions}</span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.productActions}>
-                <button className={styles.consultButton} type="button">
-                  Consultar
-                </button>
-                <button className={styles.detailsButton} type="button">
-                  Ver detalles
-                  <img className={styles.detailsIcon} alt="" src="/Icon12.svg" />
-                </button>
-              </div>
-            </article>
+            <ProductCard
+              key={product.sku}
+              sku={product.sku}
+              stock={product.stock}
+              stockColor={product.stockColor}
+              name={product.name}
+              description={product.description}
+              material={product.material}
+              dimensions={product.dimensions}
+              image={product.image}
+            />
           ))}
         </section>
 

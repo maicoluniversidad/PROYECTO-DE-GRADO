@@ -1,4 +1,5 @@
 import { FunctionComponent, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Section3.module.css";
 
 export type Section3Type = {
@@ -6,9 +7,11 @@ export type Section3Type = {
 };
 
 const Section3: FunctionComponent<Section3Type> = ({ className = "" }) => {
+  const navigate = useNavigate();
+  
   const onLinkClick = useCallback(() => {
-    // Please sync "Frame 1" to the project
-  }, []);
+    navigate("/encontrar-pieza", { replace: true });
+  }, [navigate]);
 
   return (
     <div className={[styles.section, className].join(" ")}>

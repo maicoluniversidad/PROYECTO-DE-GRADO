@@ -76,7 +76,7 @@
 .encontrarPieza,
 .catlogo {
   margin: 0;
-  font-family: Inter, sans-serif;
+  font-family: var(--font-inter);
   font-size: 14px;
   font-weight: 600;
   color: #0f172a;

@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: #f8fafc;
-  font-family: Inter, sans-serif;
+  font-family: var(--font-inter);
   color: #0f172a;
 }
 
