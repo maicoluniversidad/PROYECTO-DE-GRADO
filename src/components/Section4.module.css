@@ -1,22 +1,25 @@
 .container,
 .section {
-    align-items: center;
+  align-items: center;
   justify-content: center;
   box-sizing: border-box;
   max-width: 100%;
 }
 .section {
-  align-self: stretch;
-  height: 690px;
+  width: 100%;
+  min-height: auto;
   background-color: var(--color-whitesmoke-100);
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  padding: var(--padding-96) var(--padding-152);
+  padding: var(--padding-96) var(--padding-32);
   gap: var(--gap-48);
 }
 .container {
+  width: 100%;
+  max-width: 640px;
   flex-direction: column;
-  padding: var(--padding-0) var(--padding-0) 174px;
+  padding: 0 0 174px;
   gap: var(--gap-32);
   text-align: left;
   font-size: var(--fs-30);
@@ -34,56 +37,51 @@
   gap: var(--gap-24);
 }
 .heading2 {
-  width: var(--width-592);
-  height: var(--height-36);
-  padding: var(--padding-0) var(--padding-0) var(--padding-2);
+  width: 100%;
+  padding: 0 0 var(--padding-2);
   box-sizing: border-box;
 }
 .contactoRpido {
   margin: 0;
-  height: var(--height-36);
-  width: 245px;
-  position: relative;
+  width: auto;
+  max-width: 100%;
   font-size: inherit;
   line-height: var(--lh-36);
   font-weight: 700;
   font-family: inherit;
   display: inline-block;
-  flex-shrink: 0;
+  text-align: left;
 }
 .paragraph {
-  width: var(--width-592);
-  height: var(--height-28);
+  width: 100%;
   display: flex;
   align-items: flex-start;
-  padding: var(--padding-0) var(--padding-0) var(--padding-1);
+  padding: 0 0 var(--padding-1);
   box-sizing: border-box;
   font-size: var(--fs-18);
   color: var(--color-slategray);
 }
 .nuestroEquipoDe {
   margin-top: -1px;
-  height: var(--height-28);
-  width: 496px;
-  position: relative;
+  width: 100%;
+  max-width: 520px;
   line-height: var(--lh-28);
   display: inline-block;
 }
 .container2,
 .container3 {
   display: flex;
-  align-items: flex-start;
 }
 .container2 {
-  width: var(--width-592);
+  width: 100%;
   flex-direction: column;
   gap: var(--gap-24);
   max-width: 100%;
   font-size: var(--fs-16);
 }
 .container3 {
-  align-self: stretch;
-  height: var(--height-52);
+  width: 100%;
+  flex-wrap: wrap;
   gap: var(--gap-16);
 }
 .containerIcon {
@@ -97,14 +95,14 @@
   align-items: flex-start;
 }
 .container4 {
-  height: var(--height-52);
-  width: 211.3px;
+  width: 100%;
+  min-width: 180px;
   flex-direction: column;
   gap: var(--gap-4);
 }
 .heading4 {
-  align-self: stretch;
-  padding: var(--padding-0) var(--padding-0) var(--padding-2);
+  width: 100%;
+  padding: 0 0 var(--padding-2);
   box-sizing: border-box;
 }
 .email,
@@ -128,68 +126,39 @@
   box-sizing: border-box;
   color: var(--color-slategray);
 }
-.contactoindustrialpartscom {
-  margin-top: -2px;
-  height: var(--height-24);
-  width: 228px;
-  position: relative;
-  line-height: var(--lh-24);
-  display: inline-block;
-  flex-shrink: 0;
-}
-.container6 {
-  height: var(--height-52);
-  width: 119px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-4);
-}
+.contactoindustrialpartscom,
 .phoneSpace,
-.telfono {
-  margin-top: -2px;
-  height: var(--height-24);
-  position: relative;
-  line-height: var(--lh-24);
-  display: inline-block;
-  flex-shrink: 0;
-}
-.telfono {
-  width: 69px;
-}
-.phoneSpace {
-  width: 132px;
-  white-space: nowrap;
-}
-.container8 {
-  height: var(--height-52);
-  width: 144.5px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-4);
-}
+.telfono,
 .horario,
 .lunVie800 {
   margin-top: -2px;
   height: var(--height-24);
-  width: 59px;
   position: relative;
   line-height: var(--lh-24);
   display: inline-block;
   flex-shrink: 0;
+  width: auto;
 }
+.container6,
+.container8 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-4);
+  width: 100%;
+}
+.telfono,
+.phoneSpace,
 .lunVie800 {
-  width: 161px;
-  white-space: nowrap;
+  white-space: normal;
 }
 .container9,
 .form {
   flex-direction: column;
 }
 .container9 {
-  height: 498px;
-  width: var(--width-592);
+  width: 100%;
+  max-width: 640px;
+  min-height: auto;
   border-radius: var(--br-14);
   background-color: var(--color-white);
   border: var(--border-1);
@@ -197,14 +166,12 @@
   display: flex;
   align-items: flex-start;
   padding: var(--padding-33) var(--padding-32) var(--padding-1);
-  max-width: 100%;
   text-align: left;
   font-size: var(--fs-14);
   color: var(--color-gray-100);
   font-family: var(--font-inter);
 }
 .form {
-  height: 432px;
   gap: var(--gap-24);
 }
 .container10,
@@ -215,7 +182,7 @@
   align-items: flex-start;
 }
 .container10 {
-  height: 78px;
+  min-height: 78px;
   flex-direction: column;
   gap: var(--gap-8);
 }
@@ -229,13 +196,12 @@
   font-weight: 600;
 }
 .textInput {
-  align-self: stretch;
-  height: 50px;
+  width: 100%;
+  min-height: 50px;
   border-radius: var(--br-10);
   border: var(--border-2);
   box-sizing: border-box;
   overflow: hidden;
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   padding: var(--padding-12) var(--padding-16);
@@ -248,7 +214,7 @@
   font-family: var(--font-inter);
   font-size: var(--fs-16);
   background-color: transparent;
-  height: var(--height-19);
+  min-height: var(--height-19);
   position: relative;
   color: var(--color-gray-200);
   text-align: left;
@@ -290,13 +256,14 @@
 .button {
   cursor: pointer;
   border: 0;
-  padding: var(--padding-10) 203px var(--padding-14) 204px;
+  padding: var(--padding-12) var(--padding-24);
   background-color: var(--color-royalblue-100);
-  align-self: stretch;
+  width: 100%;
+  max-width: 320px;
   height: var(--height-48);
   border-radius: var(--br-10);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   box-sizing: border-box;
 }
@@ -304,8 +271,7 @@
   background-color: var(--color-dodgerblue);
 }
 .enviarMensaje {
-  height: var(--height-24);
-  width: 118px;
+  width: auto;
   position: relative;
   font-size: var(--fs-16);
   line-height: var(--lh-24);

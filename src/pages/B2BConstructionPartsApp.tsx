@@ -11,6 +11,7 @@ import styles from "./B2BConstructionPartsApp.module.css";
 const B2BConstructionPartsApp: FunctionComponent = () => {
   return (
     <div className={styles.b2bConstructionPartsApp}>
+      <Header />
       <main className={styles.body}>
         <section className={styles.mainContent}>
           <Section />
@@ -21,7 +22,6 @@ const B2BConstructionPartsApp: FunctionComponent = () => {
         </section>
         <Footer />
       </main>
-      <Header />
     </div>
   );
 };
