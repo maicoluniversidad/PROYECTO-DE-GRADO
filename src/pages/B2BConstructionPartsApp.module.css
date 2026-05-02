@@ -10,13 +10,13 @@
 .mainContent {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   max-width: 100%;
 }
 .body {
   position: absolute;
   top: 0;
-  left: 10;
+  left: 0;
   background-color: var(--color-whitesmoke-200);
   height: 100%;
   padding: 85px var(--padding-0) var(--padding-0);

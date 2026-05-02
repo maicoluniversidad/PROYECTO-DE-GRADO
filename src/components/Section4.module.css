@@ -356,6 +356,26 @@
     box-sizing: border-box;
   }
 }
+
+/* Extra small screens / Very low zoom support */
+@media screen and (max-width: 320px) {
+  .section {
+    padding-left: var(--padding-10);
+    padding-right: var(--padding-10);
+    height: auto;
+    gap: var(--gap-16);
+  }
+  .container {
+    height: auto;
+  }
+  .container3 {
+    gap: 8px;
+  }
+  .button {
+    padding-left: var(--padding-10) !important;
+    padding-right: var(--padding-10) !important;
+  }
+}
 .container3 {
   display: flex;
   flex-wrap: wrap;

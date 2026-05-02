@@ -4,12 +4,14 @@ import {
   type CSSProperties,
   useCallback,
 } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Link.module.css";
 
 export type LinkType = {
   className?: string;
   bisagras?: string;
   productos?: string;
+  to?: string;
 
   /** Style props */
   containerBackground?: CSSProperties["background"];
@@ -22,6 +24,7 @@ const Link: FunctionComponent<LinkType> = ({
   bisagras,
   bisagrasWidth,
   productos,
+  to,
 }) => {
   const containerStyle: CSSProperties = useMemo(() => {
     return {
@@ -35,9 +38,16 @@ const Link: FunctionComponent<LinkType> = ({
     };
   }, [bisagrasWidth]);
 
+  const navigate = useNavigate();
+
   const onLinkClick = useCallback(() => {
-    // Please sync "Frame 2" to the project
-  }, []);
+    window.scrollTo(0, 0);
+    if (to) {
+      navigate(to, { replace: true });
+    } else {
+      navigate("/catalogo", { replace: true });
+    }
+  }, [navigate, to]);
 
   return (
     <button

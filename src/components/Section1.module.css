@@ -84,7 +84,6 @@
   align-self: stretch;
   height: 274px;
   display: flex;
-  align-items: flex-start;
   gap: var(--gap-32);
   max-width: 100%;
   text-align: left;
@@ -143,5 +142,22 @@
   .porQuElegirnos {
     font-size: var(--fs-18);
     line-height: var(--lh-22);
+  }
+}
+
+/* Extra small screens / Very low zoom support */
+@media screen and (max-width: 320px) {
+  .section {
+    padding-left: var(--padding-10);
+    padding-right: var(--padding-10);
+    height: auto;
+  }
+  .heading2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .container2 {
+    height: auto;
+    gap: 12px 8px;
   }
 }

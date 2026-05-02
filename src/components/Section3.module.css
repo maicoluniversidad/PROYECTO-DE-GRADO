@@ -67,11 +67,10 @@
   color: var(--color-lavender);
 }
 .nuestroAsistenteInteligente {
-  align-items: center;
-  justify-content: center;
   width: 848px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
   font-size: var(--fs-18);
   color: var(--color-lavender);
@@ -164,5 +163,22 @@
     padding-left: var(--padding-20);
     padding-right: var(--padding-20);
     box-sizing: border-box;
+  }
+}
+
+/* Extra small screens / Very low zoom support */
+@media screen and (max-width: 320px) {
+  .section {
+    padding-left: var(--padding-10);
+    padding-right: var(--padding-10);
+    height: auto;
+  }
+  .container {
+    height: auto;
+    padding: var(--padding-0);
+  }
+  .assistantAction {
+    padding-left: var(--padding-10) !important;
+    padding-right: var(--padding-10) !important;
   }
 }

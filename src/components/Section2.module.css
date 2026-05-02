@@ -72,9 +72,8 @@
   align-self: stretch;
   height: 354px;
   display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: center;
   gap: var(--gap-24) 21.3px;
 }
 @media screen and (max-width: 1200px) {
@@ -131,5 +130,23 @@
     padding-left: var(--padding-20);
     padding-right: var(--padding-20);
     box-sizing: border-box;
+  }
+}
+
+/* Extra small screens / Very low zoom support */
+@media screen and (max-width: 320px) {
+  .section {
+    padding-left: var(--padding-10);
+    padding-right: var(--padding-10);
+    height: auto;
+  }
+  .container2 {
+    height: auto;
+    gap: 12px 8px;
+  }
+  .heading2,
+  .paragraph {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { useParams } from "react-router-dom";
 import Footer from "../components/Footercatalogoproductos";
 import Header from "../components/Headercatalogoproductos";
 import styles from "./catalogoproductos.module.css";
@@ -105,7 +106,25 @@ const products: Product[] = [
   },
 ];
 
+const categoryLabels: Record<string, string> = {
+  bisagras: "Bisagras",
+  bujes: "Bujes",
+  soportes: "Soportes",
+  lenguetas: "Lengüetas",
+  pivotes: "Pivotes",
+  platinas: "Platinas",
+  tornilleria: "Tornillería",
+  accesorios: "Accesorios",
+};
+
 const CatalogoProductos: FunctionComponent = () => {
+  const { category } = useParams<{ category?: string }>();
+  const displayCategory = category ? categoryLabels[category] ?? category : "Productos";
+  const title = category ? `Catálogo de ${displayCategory}` : "Catálogo de Productos";
+  const subtitle = category
+    ? `Explora productos de ${displayCategory}`
+    : "Explora nuestro catálogo completo de componentes industriales";
+
   return (
     <div className={styles.root}>
       <Header />
@@ -113,10 +132,8 @@ const CatalogoProductos: FunctionComponent = () => {
         <section className={styles.hero}>
           <div className={styles.heroContent}>
             <div className={styles.heroText}>
-              <h1 className={styles.title}>Catálogo de Productos</h1>
-              <p className={styles.subtitle}>
-                Explora nuestro catálogo completo de componentes industriales
-              </p>
+              <h1 className={styles.title}>{title}</h1>
+              <p className={styles.subtitle}>{subtitle}</p>
             </div>
           </div>
         </section>

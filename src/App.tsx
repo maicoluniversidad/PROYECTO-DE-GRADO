@@ -12,6 +12,7 @@ function App() {
         <Route path="/" element={<B2BConstructionPartsApp />} />
         <Route path="/encontrar-pieza" element={<Encontrarpieza />} />
         <Route path="/catalogo" element={<Catalogoproductos />} />
+        <Route path="/catalogo/:category" element={<Catalogoproductos />} />
         <Route path="/encontrar-pieza/catalogo" element={<Catalogoproductos />} />
         <Route path="/admin" element={<Admin />} />
 
