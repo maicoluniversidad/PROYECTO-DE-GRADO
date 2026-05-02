@@ -4,6 +4,7 @@ import Encontrarpieza from "./pages/Encontrarpieza";
 import Catalogoproductos from "./pages/catalogoproductos";
 import ProductDetail from "./pages/ProductDetail";
 import Admin from "./pages/Admin";
+import Asesor from "./pages/Asesor";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/catalogo/:category" element={<Catalogoproductos />} />
         <Route path="/encontrar-pieza/catalogo" element={<Catalogoproductos />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/asesor" element={<Asesor />} />
 
         {/* 🔥 seguridad */}
         <Route path="*" element={<Navigate to="/" replace />} />

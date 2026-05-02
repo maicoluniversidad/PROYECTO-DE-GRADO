@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import Footer from "../components/Footercatalogoproductos";
@@ -14,6 +14,7 @@ type Product = {
   material: string;
   dimensions: string;
   image: string;
+  categorySlug: string;
 };
 
 const products: Product[] = [
@@ -27,6 +28,7 @@ const products: Product[] = [
     material: "Acero Inoxidable 304",
     dimensions: "100 x 75 x 3mm",
     image: "/Container7@2x.png",
+    categorySlug: "bisagras",
   },
   {
     sku: "BUJ-002",
@@ -38,6 +40,7 @@ const products: Product[] = [
     material: "Bronce SAE 660 + Grafito",
     dimensions: "Ø40 x 50mm (ext x long)",
     image: "/Container7@2x.png",
+    categorySlug: "bujes",
   },
   {
     sku: "BUJ-003",
@@ -49,6 +52,7 @@ const products: Product[] = [
     material: "Bronce CuSn12",
     dimensions: "Ø60 x 80mm",
     image: "/Container7@2x.png",
+    categorySlug: "bujes",
   },
   {
     sku: "SOP-004",
@@ -60,6 +64,7 @@ const products: Product[] = [
     material: "Acero S275JR",
     dimensions: "200 x 150 x 45mm",
     image: "/Container7@2x.png",
+    categorySlug: "soportes",
   },
   {
     sku: "LEN-005",
@@ -71,6 +76,7 @@ const products: Product[] = [
     material: "Acero Inoxidable 316",
     dimensions: "80 x 30 x 5mm",
     image: "/Container7@2x.png",
+    categorySlug: "lenguetas",
   },
   {
     sku: "BIS-006",
@@ -82,6 +88,7 @@ const products: Product[] = [
     material: "Acero al carbono C45",
     dimensions: "180 x 120 x 6mm",
     image: "/Container7@2x.png",
+    categorySlug: "bisagras",
   },
   {
     sku: "VAL-007",
@@ -93,6 +100,7 @@ const products: Product[] = [
     material: "Acero Inoxidable 316",
     dimensions: "50 x 50 x 40mm",
     image: "/Container7@2x.png",
+    categorySlug: "accesorios",
   },
   {
     sku: "TPR-008",
@@ -104,6 +112,7 @@ const products: Product[] = [
     material: "Nylon PA6",
     dimensions: "M18 x 25mm",
     image: "/Container7@2x.png",
+    categorySlug: "accesorios",
   },
 ];
 
@@ -120,11 +129,28 @@ const categoryLabels: Record<string, string> = {
 
 const CatalogoProductos: FunctionComponent = () => {
   const { category } = useParams<{ category?: string }>();
+  const [searchTerm, setSearchTerm] = useState("");
+
   const displayCategory = category ? categoryLabels[category] ?? category : "Productos";
   const title = category ? `Catálogo de ${displayCategory}` : "Catálogo de Productos";
   const subtitle = category
     ? `Explora productos de ${displayCategory}`
     : "Explora nuestro catálogo completo de componentes industriales";
+
+  const filteredProducts = useMemo(() => {
+    const normalizedSearch = searchTerm.trim().toLowerCase();
+    return products.filter((product) => {
+      const matchesCategory = category ? product.categorySlug === category : true;
+      const matchesSearch =
+        normalizedSearch === "" ||
+        product.name.toLowerCase().includes(normalizedSearch) ||
+        product.description.toLowerCase().includes(normalizedSearch) ||
+        product.material.toLowerCase().includes(normalizedSearch) ||
+        product.sku.toLowerCase().includes(normalizedSearch);
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [category, searchTerm]);
 
   return (
     <div className={styles.root}>
@@ -148,6 +174,8 @@ const CatalogoProductos: FunctionComponent = () => {
                   className={styles.searchInput}
                   type="text"
                   placeholder="Buscar productos..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
               <button className={styles.filterButton} type="button">
@@ -166,12 +194,12 @@ const CatalogoProductos: FunctionComponent = () => {
           </div>
 
           <div className={styles.summary}>
-            Mostrando <span>{products.length}</span> productos
+            Mostrando <span>{filteredProducts.length}</span> productos
           </div>
         </section>
 
         <section className={styles.grid}>
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard
               key={product.sku}
               sku={product.sku}

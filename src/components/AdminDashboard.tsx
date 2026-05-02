@@ -121,9 +121,9 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <div className={styles.logoIcon}>🏭</div>
-          <div className={styles.headerCenter}>voxler año</div>
-          <button className={styles.accessBtn} onClick={onLogout}>
-            Acceder
+          <div className={styles.headerCenter}>Acceso Administrador</div>
+          <button className={styles.logoutBtn} onClick={onLogout}>
+            Cerrar sesión
           </button>
         </div>
       </header>
@@ -211,7 +211,6 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
               <div className={styles.requestContent}>
                 <div className={styles.requestHeader}>
                   <h3 className={styles.requestTitle}>{request.title}</h3>
-                  <span className={styles.requestId}>{request.id}</span>
                 </div>
 
                 <p className={styles.requestDescription}>{request.description}</p>
@@ -228,17 +227,23 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                 </div>
               </div>
 
-              <div className={styles.requestActions}>
-                <button className={styles.viewDetailsBtn}>Ver detalles</button>
-                <button className={`${styles.actionBtn} ${styles.approve}`}>✓ Aprobar</button>
-                <button className={`${styles.actionBtn} ${styles.reject}`}>✕ Rechazar</button>
-              </div>
+              <div className={styles.requestSide}>
+                <div className={styles.requestHeaderRight}>
+                  <span className={styles.requestId}>{request.id}</span>
+                </div>
 
-              <div className={styles.requestStatus} style={{ color: getStatusColor(request.status) }}>
-                {request.status === "Pendiente" && "⏳"}
-                {request.status === "Aprobado" && "✅"}
-                {request.status === "Rechazado" && "❌"}
-                {request.status}
+                <div className={styles.requestActions}>
+                  <button className={styles.viewDetailsBtn}>Ver detalles</button>
+                  <button className={`${styles.actionBtn} ${styles.approve}`}>✓ Aprobar</button>
+                  <button className={`${styles.actionBtn} ${styles.reject}`}>✕ Rechazar</button>
+                </div>
+
+                <div className={styles.requestStatus} style={{ color: getStatusColor(request.status) }}>
+                  {request.status === "Pendiente" && "⏳"}
+                  {request.status === "Aprobado" && "✅"}
+                  {request.status === "Rechazado" && "❌"}
+                  {request.status}
+                </div>
               </div>
             </div>
           ))}
