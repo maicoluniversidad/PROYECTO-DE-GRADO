@@ -11,7 +11,7 @@ const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = 
       <div className={styles.container}>
         <div className={styles.container2}>
           <div className={styles.heading3}>
-            <b className={styles.metalMecnicaEl}>metal mecánica el imperio</b>
+            <b className={styles.metalMecnicaEl}>Metal Mecanica El Imperio</b>
           </div>
           <div className={styles.paragraph}>
             <div className={styles.proveedorLderDe}>
@@ -78,7 +78,7 @@ const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = 
       </div>
       <div className={styles.container6}>
         <div className={styles.bisagras}>
-          © 2026 metal mecánica el imperio. Todos los derechos reservados.
+          © 2026 Metal Mecanica El Imperio. Todos los derechos reservados.
         </div>
       </div>
     </footer>

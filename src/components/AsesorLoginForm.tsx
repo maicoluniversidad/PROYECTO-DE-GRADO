@@ -31,7 +31,7 @@ export default function AsesorLoginForm({ onLogin }: AsesorLoginFormProps) {
     <div className={styles.loginContainer}>
       <div className={styles.headerIcon}>
         <div className={styles.icon}>🧑‍💼</div>
-        <h2 className={styles.companyName}>metal mecánica el imperio</h2>
+        <h2 className={styles.companyName}>Metal Mecanica El Imperio</h2>
         <p className={styles.companySubtitle}>Panel de Asesor</p>
       </div>
 
@@ -68,14 +68,6 @@ export default function AsesorLoginForm({ onLogin }: AsesorLoginFormProps) {
           </button>
         </form>
 
-        <div className={styles.credentials}>
-          <p className={styles.credentialsTitle}>Credenciales de prueba:</p>
-          <div className={styles.credentialItem}>
-            <h3>Asesor</h3>
-            <p>Usuario: <span>asesor</span></p>
-            <p>Contraseña: <span>asesor123</span></p>
-          </div>
-        </div>
 
         <p className={styles.switchMode}>
           ¿Necesitas entrar como administrador? <Link to="/admin">Haz clic aquí</Link>

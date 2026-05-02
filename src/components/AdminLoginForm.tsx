@@ -31,7 +31,7 @@ export default function AdminLoginForm({ onLogin }: AdminLoginFormProps) {
     <div className={styles.loginContainer}>
       <div className={styles.headerIcon}>
         <div className={styles.icon}>⚙️</div>
-        <h2 className={styles.companyName}>metal mecánica el imperio</h2>
+        <h2 className={styles.companyName}>Metal Mecanica El Imperio</h2>
         <p className={styles.companySubtitle}>Panel de Administración</p>
       </div>
 
@@ -68,15 +68,7 @@ export default function AdminLoginForm({ onLogin }: AdminLoginFormProps) {
           </button>
         </form>
 
-        <div className={styles.credentials}>
-          <p className={styles.credentialsTitle}>Credenciales de prueba:</p>
-
-          <div className={styles.credentialItem}>
-            <h3>Administrador</h3>
-            <p>Usuario: <span>admin</span></p>
-            <p>Contraseña: <span>admin123</span></p>
-          </div>
-        </div>
+       
 
         <p className={styles.switchMode}>
           ¿Eres asesor? <Link to="/asesor">Accede aquí</Link>

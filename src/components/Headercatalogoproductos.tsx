@@ -33,7 +33,7 @@ const Headercatalogoproductos: FunctionComponent<HeaderType> = ({ className = ""
           <div className={styles.containercatalogoproductos2}>
             <div className={styles.heading1}>
               <h3 className={styles.metalMecnicaEl}>
-                metal mecánica el imperio
+                Metal Mecanica El Imperio
               </h3>
             </div>
             <div className={styles.paragraph}>
