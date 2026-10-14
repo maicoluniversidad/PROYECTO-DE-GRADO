@@ -5,13 +5,6 @@ export type FootercatalogoproductosType = {
   className?: string;
 };
 
-// Rutas a tus PDFs almacenados en public/docs/
-const PDF_ROUTES = {
-  bisagras: "/docs/BIS-001_ficha_tecnica.pdf",
-  bujes: "/docs/BUJ-001_ficha_tecnica.pdf",
-  soportes: "/docs/SOP-001_ficha_tecnica.pdf",
-  lenguetas: "/docs/LEN-001_ficha_tecnica.pdf",
-};
 
 const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = ({ className = "" }) => {
   return (
@@ -36,7 +29,7 @@ const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = 
             <div className={styles.list}>
               <div className={styles.listItem}>
                 <a
-                  href={PDF_ROUTES.bisagras}
+                  href="#fichas-tecnicas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.bisagras}
@@ -47,7 +40,7 @@ const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = 
               </div>
               <div className={styles.listItem}>
                 <a
-                  href={PDF_ROUTES.bujes}
+                  href="#fichas-tecnicas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.bisagras}
@@ -58,7 +51,7 @@ const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = 
               </div>
               <div className={styles.listItem}>
                 <a
-                  href={PDF_ROUTES.soportes}
+                  href="#fichas-tecnicas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.bisagras}
@@ -69,7 +62,7 @@ const Footercatalogoproductos: FunctionComponent<FootercatalogoproductosType> = 
               </div>
               <div className={styles.listItem}>
                 <a
-                  href={PDF_ROUTES.lenguetas}
+                  href="#fichas-tecnicas"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.bisagras}
