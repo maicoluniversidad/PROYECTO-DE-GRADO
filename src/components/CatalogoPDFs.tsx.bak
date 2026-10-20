@@ -1,0 +1,50 @@
+import { useState } from "react";
+import { usePdfs, Categoria } from "../hooks/usePdfs";
+
+const CATEGORIAS: { id: Categoria | "todos"; label: string }[] = [
+  { id: "todos", label: "Todos" },
+  { id: "bisagras", label: "Bisagras" },
+  { id: "bujes", label: "Bujes" },
+  { id: "soportes", label: "Soportes" },
+  { id: "lenguetas", label: "Lengüetas" },
+  { id: "otros", label: "Otros" },
+];
+
+export default function CatalogoPDFs() {
+  const docs = usePdfs();
+  const [cat, setCat] = useState<Categoria | "todos">("todos");
+  const [q, setQ] = useState("");
+
+  const visibles = docs.filter(
+    (d) =>
+      (cat === "todos" || d.categoria === cat) &&
+      d.nombre.toLowerCase().includes(q.toLowerCase())
+  );
+
+  return (
+    <section id="fichas-tecnicas">
+      <h2>Fichas técnicas ({visibles.length})</h2>
+      <input
+        placeholder="Buscar ficha..."
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+      />
+      <div>
+        {CATEGORIAS.map((c) => (
+          <button key={c.id} onClick={() => setCat(c.id)}>
+            {c.label}
+          </button>
+        ))}
+      </div>
+      <ul>
+        {visibles.map((d) => (
+          <li key={d.archivo}>
+            <a href={d.url} target="_blank" rel="noopener noreferrer">
+              {d.nombre}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}

@@ -1,0 +1,57 @@
+export type DocumentoPDF = {
+  nombre: string;
+  archivo: string;
+  url: string;
+};
+
+export async function obtenerPDFs(): Promise<DocumentoPDF[]> {
+  const respuesta = await fetch("/docs-manifest.json");
+
+  if (!respuesta.ok) {
+    throw new Error("No se pudo cargar docs-manifest.json");
+  }
+
+  return respuesta.json();
+}
+
+export function normalizarTexto(texto: string): string {
+  return texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+export function buscarPDF(
+  documentos: DocumentoPDF[],
+  nombrePieza: string,
+  idPieza: string
+): DocumentoPDF | undefined {
+  const nombreNormalizado = normalizarTexto(nombrePieza);
+
+  // primero intenta encontrar el PDF por el nombre de la pieza
+  const porNombre = documentos.find((documento) => {
+    const nombrePDF = normalizarTexto(documento.nombre);
+
+    return (
+      nombrePDF === nombreNormalizado ||
+      nombrePDF.includes(nombreNormalizado) ||
+      nombreNormalizado.includes(nombrePDF)
+    );
+  });
+
+  if (porNombre) {
+    return porNombre;
+  }
+
+  // si no encuentra por nombre, intenta por el ID
+  const porId = documentos.find((documento) => {
+    return (
+      documento.archivo.toLowerCase().includes(idPieza.toLowerCase()) ||
+      documento.nombre.toLowerCase().includes(idPieza.toLowerCase())
+    );
+  });
+
+  return porId;
+}

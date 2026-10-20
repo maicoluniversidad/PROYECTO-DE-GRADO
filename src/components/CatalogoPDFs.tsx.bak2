@@ -1,0 +1,119 @@
+import { useState } from "react";
+import { usePdfs, Categoria } from "../hooks/usePdfs";
+
+const CATEGORIAS: { id: Categoria | "todos"; label: string }[] = [
+  { id: "todos", label: "Todos" },
+  { id: "bisagras", label: "Bisagras" },
+  { id: "bujes", label: "Bujes" },
+  { id: "soportes", label: "Soportes" },
+  { id: "lenguetas", label: "Lengüetas" },
+  { id: "otros", label: "Otros" },
+];
+
+const boton = (primario: boolean): React.CSSProperties => ({
+  flex: 1,
+  textAlign: "center",
+  padding: "8px 12px",
+  borderRadius: 8,
+  fontSize: 14,
+  fontWeight: 600,
+  textDecoration: "none",
+  cursor: "pointer",
+  border: primario ? "none" : "1px solid #2563eb",
+  background: primario ? "#2563eb" : "#fff",
+  color: primario ? "#fff" : "#2563eb",
+});
+
+export default function CatalogoPDFs() {
+  const docs = usePdfs();
+  const [cat, setCat] = useState<Categoria | "todos">("todos");
+  const [q, setQ] = useState("");
+
+  const visibles = docs.filter(
+    (d) =>
+      (cat === "todos" || d.categoria === cat) &&
+      d.nombre.toLowerCase().includes(q.toLowerCase())
+  );
+
+  return (
+    <section
+      id="fichas-tecnicas"
+      style={{ maxWidth: 1240, margin: "48px auto", padding: "0 16px" }}
+    >
+      <h2 style={{ marginBottom: 16 }}>Fichas técnicas ({visibles.length})</h2>
+
+      <input
+        placeholder="Buscar ficha..."
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        style={{
+          width: "100%",
+          padding: "12px 16px",
+          borderRadius: 10,
+          border: "1px solid #e5e7eb",
+          marginBottom: 12,
+          boxSizing: "border-box",
+        }}
+      />
+
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
+        {CATEGORIAS.map((c) => (
+          <button
+            key={c.id}
+            type="button"
+            onClick={() => setCat(c.id)}
+            style={{
+              padding: "6px 14px",
+              borderRadius: 999,
+              cursor: "pointer",
+              border: "1px solid #2563eb",
+              background: cat === c.id ? "#2563eb" : "#fff",
+              color: cat === c.id ? "#fff" : "#2563eb",
+            }}
+          >
+            {c.label}
+          </button>
+        ))}
+      </div>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          gap: 16,
+        }}
+      >
+        {visibles.map((d) => (
+          <div
+            key={d.archivo}
+            style={{
+              padding: 16,
+              border: "1px solid #e5e7eb",
+              borderRadius: 12,
+              background: "#fff",
+              display: "flex",
+              flexDirection: "column",
+              gap: 12,
+            }}
+          >
+            <div style={{ fontWeight: 600, wordBreak: "break-word" }}>
+              📄 {d.nombre}
+            </div>
+            <div style={{ display: "flex", gap: 8, marginTop: "auto" }}>
+              <a href={d.url} target="_blank" rel="noopener noreferrer" style={boton(false)}>
+                Ver
+              </a>
+              <a href={d.url} download={d.archivo} style={boton(true)}>
+                ⬇ Descargar
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {visibles.length === 0 && (
+        <p style={{ color: "#6b7280" }}>No hay fichas que coincidan.</p>
+      )}
+    </section>
+  );
+}
